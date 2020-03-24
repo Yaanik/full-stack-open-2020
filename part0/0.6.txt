@@ -1,0 +1,7 @@
+title exercise0.6
+
+note left of browser: cleaned the network log, sent the request
+browser->server: POST request to server /new_note_spa with data of the note and timestamp
+server->browser: Statuscode 201 
+eventHandler->browser: prevents redirecting, renders new note over 
+eventHandler->server: sends the new note to the server

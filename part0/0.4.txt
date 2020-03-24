@@ -1,0 +1,14 @@
+title exercise 0.4
+note left of browser: User fills form and clicks button
+browser->server: HTTP POST request (new_note) to /notes with form data
+server->browser: Status code 302
+note right of server: Browser asks to do new HTTP Get request
+note right of server: Browser reloads page, sends 3 more
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+server->browser: HTML from notes
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server->browser: CSS from main.css
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server->browser: js from main.js
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server->browser: data from data.json [{content: "HTML is easy", date: "$currentTime"}]
