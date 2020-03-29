@@ -1,0 +1,9 @@
+title exercise 0.5
+browser->server: HTTP get request https://fullstack-exampleapp.herokuapp.com/spa
+server->browser: Responds with HTML
+browser->server: HTTP get request https://fullstack-exampleapp.herokuapp.com/main.css
+server->browser: Sends .css file
+browser->server: HTTP get request https://fullstack-exampleapp.herokuapp.com/spa.js
+server->browser: Sends .js file
+browser->server: HTTP get request https://fullstack-exampleapp.herokuapp.com/data.json
+server->browser: Sets up connection with db and send data from it
