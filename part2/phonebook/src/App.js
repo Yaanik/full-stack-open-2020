@@ -43,18 +43,12 @@ const App = () => {
         }, 5000)
     };
 
-    const updatePersons = (prev, returned) => {
-        const updatedPersons = [...prev];
-        updatedPersons[returned.id - 1] = returned;
-        setPersons(updatedPersons)
-    };
 
     const addPerson = (event) =>{
         event.preventDefault();
         const personObject = {
             name: newName,
             number: newNumber,
-            id: persons.length + 1
         };
 
         if(personObject.name !== '' || personObject.number !== ''){
@@ -65,7 +59,7 @@ const App = () => {
                     personsService
                         .update(id, personObject)
                         .then(returnedPerson => {
-                            updatePersons(persons, returnedPerson);
+                            setPersons(persons.map(person => person.id !== id ? person : returnedPerson));
                             setNewName('');
                             setNewNumber('');
                             handleMessage(`${returnedPerson.name} was successfully updated!`, 'success')
@@ -86,7 +80,7 @@ const App = () => {
                         handleMessage(`Person ${returnedPerson.name} was successfully added!`, 'success');
                     })
                     .catch(error =>{
-                        handleMessage(`Unexpected error!`, 'error')
+                        handleMessage(error.response.data.error, 'error')
                     })
             }
         }

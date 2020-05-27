@@ -2,5 +2,14 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/part1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/part3/phonebook" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/part3/theory" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/part4/blog-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/part4/notes-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/part5/notes-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/part5/notes-frontend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/part7/country-hook" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/part7/ultimate-hooks" vcs="Git" />
   </component>
 </project>
