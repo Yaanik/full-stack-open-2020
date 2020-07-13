@@ -1,7 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/part1/courseinfo/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part1/theory/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part1/unicafe/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part2/country" />
+      <excludeFolder url="file://$MODULE_DIR$/part2/countryinfo/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part2/courseinfoextended/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part2/phonebook/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part2/theory/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part3/phonebook/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part3/theory/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part4/blog-app/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part4/notes-app/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part5/blogs-app/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part5/blogs-frontend/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part5/notes-app/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part5/notes-frontend/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part6/redux-anecdotes/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part6/theory/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part6/unicafe-redux/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part7/blogs-app/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part7/blogs-frontend/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part7/country-hook/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part7/routed-anecdotes/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part7/ultimate-hooks/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part8/graphql-react-frontend/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part8/graphql-server/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/part8/library-frontend-master/node_modules" />
+    </content>
+    <content url="file://$MODULE_DIR$/part1/courseinfo/node_modules" />
+    <content url="file://$MODULE_DIR$/part1/theory/node_modules" />
+    <content url="file://$MODULE_DIR$/part1/unicafe/node_modules" />
+    <content url="file://$MODULE_DIR$/part2/countryinfo/node_modules" />
+    <content url="file://$MODULE_DIR$/part2/courseinfoextended/node_modules" />
+    <content url="file://$MODULE_DIR$/part2/phonebook/node_modules" />
+    <content url="file://$MODULE_DIR$/part2/theory/node_modules" />
+    <content url="file://$MODULE_DIR$/part3/phonebook/node_modules" />
+    <content url="file://$MODULE_DIR$/part3/theory/node_modules" />
+    <content url="file://$MODULE_DIR$/part4/blog-app/node_modules" />
+    <content url="file://$MODULE_DIR$/part4/notes-app/node_modules" />
+    <content url="file://$MODULE_DIR$/part5/blogs-app/node_modules" />
+    <content url="file://$MODULE_DIR$/part5/blogs-frontend/node_modules" />
+    <content url="file://$MODULE_DIR$/part5/notes-app/node_modules" />
+    <content url="file://$MODULE_DIR$/part5/notes-frontend/node_modules" />
+    <content url="file://$MODULE_DIR$/part6/redux-anecdotes/node_modules" />
+    <content url="file://$MODULE_DIR$/part6/theory/node_modules" />
+    <content url="file://$MODULE_DIR$/part6/unicafe-redux/node_modules" />
+    <content url="file://$MODULE_DIR$/part7/blogs-app/node_modules" />
+    <content url="file://$MODULE_DIR$/part7/blogs-frontend/node_modules" />
+    <content url="file://$MODULE_DIR$/part7/country-hook/node_modules" />
+    <content url="file://$MODULE_DIR$/part7/routed-anecdotes/node_modules" />
+    <content url="file://$MODULE_DIR$/part7/ultimate-hooks/node_modules" />
+    <content url="file://$MODULE_DIR$/part8/graphql-react-frontend/node_modules" />
+    <content url="file://$MODULE_DIR$/part8/graphql-server/node_modules" />
+    <content url="file://$MODULE_DIR$/part8/library-frontend-master/node_modules" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
