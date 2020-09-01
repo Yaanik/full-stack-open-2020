@@ -1,11 +1,13 @@
 import {gql} from '@apollo/client'
 
+
 export const ALL_AUTHORS = gql`
     query {
         allAuthors {
             name
             born
             id
+            bookCount
         }
     }
 `
@@ -13,8 +15,12 @@ export const ALL_AUTHORS = gql`
 export const ALL_BOOKS = gql`
     query {
         allBooks{
+            id
             title
-            author
+            author{
+                name
+            }
+            genres
             published
         }
     }
@@ -23,12 +29,17 @@ export const ALL_BOOKS = gql`
 export const LOAD_DATA = gql`
     query {
         allBooks{
+            id
             title
-            author
+            author{
+                name
+            }
+            genres
             published
-        },
+        }
         allAuthors {
             name
+            bookCount
             born
             id
         }
@@ -36,7 +47,7 @@ export const LOAD_DATA = gql`
 `
 
 export const FIND_AUTHOR = gql`
-    query findAuthorByNmae($nameToSearch: String!){
+    query findAuthorByName($nameToSearch: String!){
         findAuthor(name: $nameToSearch){
             name
             born
@@ -47,15 +58,20 @@ export const FIND_AUTHOR = gql`
 `
 
 export const CREATE_BOOK = gql`
-    mutation createBook($title: String!, $author: String!, $published: Int!, $genres: [String!]!){
+    mutation createBook(
+        $title: String!, 
+        $author: String!, 
+        $published: Int!,
+        $genres: [String!]!
+    ){
         addBook(
             title: $title,
             author: $author,
             published: $published
             genres: $genres
         ){
+            id
             title
-            author
             published
             genres
         }
@@ -75,6 +91,58 @@ export const EDIT_BORN = gql`
         }
     }
 `
+
+export const CREATE_USER = gql`
+    mutation createUser(
+        $username: String!, 
+        $favoriteGenre: String!
+    ){
+        createUser(
+            username: $username
+            favoriteGenre: $favoriteGenre
+        ){
+            username
+            favoriteGenre
+            id
+        }        
+    }
+`
+
+export const LOGIN = gql`
+    mutation login(
+        $username: String!
+        $password: String!
+    ){
+        login(
+            username: $username
+            password: $password
+        ){
+            value
+        }
+    }
+`
+
+export const ME = gql`
+    query {
+        me {
+            favoriteGenre
+        }
+    }
+`
+
+export const FILTER_GENRES = gql`
+    query allBooks($genre: String!){
+        allBooks(genre: $genre){
+            id
+            title
+            author{
+                name
+            }
+            genres
+            published
+        }
+    }
+`
 // export const CREATE_AUTHOR = gql`
-//     mutation createAuthor($name: String!, born)
+//     mutation createAuthor($name:  String!, born)
 // `

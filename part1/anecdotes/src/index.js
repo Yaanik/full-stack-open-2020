@@ -41,7 +41,7 @@ const App = (props) => {
         newVote[props].amount = votes[props].amount + 1;
         setVote(newVote);
     };
-
+[]
     const handleAnecdote = () =>{
         setSelected(Math.floor(Math.random() * 6));
     };

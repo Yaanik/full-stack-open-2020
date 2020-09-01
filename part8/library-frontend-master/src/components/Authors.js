@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react'
-import {useLazyQuery, useMutation} from '@apollo/client'
-import {EDIT_BORN, FIND_AUTHOR} from "../queries"
+import {useLazyQuery, useMutation, useQuery} from '@apollo/client'
+import {ALL_AUTHORS, ALL_BOOKS, EDIT_BORN, FIND_AUTHOR} from "../queries"
 
 
-const BornForm = ({authors}) => {
+const BornForm = () => {
     const [name, setName] = useState('')
     const [born, setBorn] = useState(Number(''))
+
+    const authors = useQuery(ALL_AUTHORS).data.allAuthors
 
     const [changeBorn, result] = useMutation(EDIT_BORN)
 
@@ -18,22 +20,16 @@ const BornForm = ({authors}) => {
     const submit = async (event) => {
         event.preventDefault()
         await changeBorn({variables: {name, born}})
-        setName('')
         setBorn(Number(''))
     }
 
-
     return(
         <div>
-            <h2>Edit author born</h2>
+            <h2>Edit author birth year</h2>
             <form onSubmit={submit}>
                 <select onChange={({target}) => setName(target.value)}>
                     {authors.map(a=> <option value={a.name} >{a.name}</option>)}
                 </select>
-                {/*<div>*/}
-                {/*    Name:*/}
-                {/*    <input value={name} onChange={({target}) => setName(target.value)}/>*/}
-                {/*</div>*/}
                 <div>
                     Born:
                     <input value={born} onChange={({target}) => setBorn(Number(target.value))}/>
@@ -45,24 +41,30 @@ const BornForm = ({authors}) => {
 }
 
 
-const Authors = ({authors, show}) => {
+const Authors = ({show}) => {
     const [author, setAuthor] = useState(null)
+
+    const authors = useQuery(ALL_AUTHORS).data.allAuthors
+
     if (!show) {
         return null
     }
 
+    console.log(show, 'show')
     return (
         <div>
-            <h2>authors</h2>
+            <h2>Authors</h2>
             <table>
                 <tbody>
                 <tr>
-                    <th></th>
                     <th>
-                        born
+                        Name
                     </th>
                     <th>
-                        books
+                        Born
+                    </th>
+                    <th>
+                        Books
                     </th>
                 </tr>
                 {authors.map(a =>
